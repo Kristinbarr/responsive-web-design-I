@@ -1,0 +1,374 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.container {
+  width: 880px;
+	margin: auto;
+}
+
+/* TABLET */
+@media (max-width: 800px){
+  .container {
+    width: 760px;
+  }
+}
+/* PHONE */
+@media (max-width: 500px){
+  .container {
+    width: 460px;
+  }
+
+}
+
+/* NAV BAR */
+
+header {
+  display: flex;
+}
+
+header nav {
+  display: flex;
+  width: 692px;
+	margin-top: 40px;
+}
+
+header nav a {
+	margin-right: 55px;
+  font-size: 16px;
+  color: gray;
+  text-decoration: none;
+}
+
+header nav a:hover {
+	text-decoration: underline;
+}
+
+header .logo {
+	margin: 28px 0 22px 0;
+}
+
+/* TABLET NAV BAR */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  header nav {
+    margin-top: 0;
+    justify-content: space-between;
+  }
+  header nav a {
+    margin: 0;
+  }
+  header .logo {
+    margin: 30px 0;
+  }
+}
+/* PHONE NAV BAR */
+@media (max-width: 500px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  header nav {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header nav a {
+    width: 500px;
+    padding: 20px 0;
+    border-top: 1px solid grey;
+    margin: 0;
+    font-size: 20px;
+    color: gray;
+    text-decoration: none;
+  }
+  header nav a:nth-last-child(1) {
+    border-bottom: 1px solid grey;
+  }
+  header .logo {
+    padding: 20px 0;
+    margin: 0;
+  }
+}
+
+/* HOME PAGE */
+
+.home-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+}
+
+.home-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 80px;
+	/* transition-duration: 1s; */
+}
+
+.home-title h1 {
+	font-family: 'Bangers', sans-serif;
+	font-size: 75px;
+	text-align: center;
+}
+
+.button-get-started {
+	width: 174px;
+	height: 34px;
+	font-size: 14px;
+	color: #444;
+	border: 1px solid #000;
+	/* transition-duration: 0.5s; */
+}
+
+.button-get-started:hover {
+	box-shadow: 0 0 10px 3px rgba(0, 100, 255, .5);
+	transition-duration: 0.5s;
+}
+
+.home-img {
+	margin: 40px 0;
+}
+
+.content-container {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 35px 0;
+  padding: 35px 0;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.content-container p {
+	padding-right: 20px;
+}
+
+.content-row-top {
+  display: flex;
+}
+
+.content-row-middle {
+	margin: 30px 0px;
+}
+
+.content-row-bottom {
+  display: flex;
+}
+
+.contact p {
+	margin: 15px 0;
+}
+
+/* TABLET CONTENT*/
+@media (max-width: 800px) {
+  .home-container {
+    justify-content: center;
+    padding: 70px 0 40px 0;
+    margin: 0;
+  }
+  .home-img {
+    display: none;
+  }
+  .content-row-top {
+    margin-left: 10px;
+  }
+  .content-row-bottom {
+    margin-left: 10px;
+  }
+  .middle-img {
+    width: 100%;
+  }
+  .contact {
+    margin: 0 20px;
+  }
+}
+/* PHONE CONTENT*/
+@media (max-width: 500px) {
+  .header-img {
+    display: none;
+  }
+  .header-container {
+    justify-content: center;
+    padding: 40px 0 75px 0;
+  }
+  .content-container  {
+    padding: 30px 0 10px 0;
+  }
+  .content-row-top {
+    flex-wrap: wrap;
+  }
+  .content-row-middle {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .content-row-bottom {
+    flex-wrap: wrap;
+  }
+  .text-content {
+    padding: 20px 0;
+  }
+  .contact {
+    margin-left: 10px;
+  }
+}
+
+/* SERVICES */
+
+.services-header-container {
+	width: 880px;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
+}
+
+.services-header-container h3 {
+	font-size: 26px;
+}
+
+.services-title {
+	margin: 30px 0 40px 0;
+}
+
+.services-card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.services-card {
+	width: 420px;
+	height: 250px;
+	padding: 20px;
+	margin: 20px 0;
+	background-color:#EEE;
+	border: 2px solid black;
+}
+
+.services-card-container .services-content-card button {
+  background: white;
+  margin: 25px 0 0 0;
+	padding: 10px 40px;
+	font-size: 12px;
+	border: 1px solid black;
+	border-radius: 5px;
+  cursor: pointer;
+}
+
+.services-card-container .services-content-card button:hover {
+  background: black;
+  color: white;
+}
+
+.services-facts-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-top: 2px solid black;
+	padding: 40px 0;
+	margin: 25px 0;
+}
+
+.services-facts-list {
+	list-style-type: square;
+	list-style-position: inside;
+	line-height: 30px;
+	margin: 0;
+}
+
+.services-facts-content p {
+	margin: 0 50px 20px 0;
+}
+
+/* PRODUCTS PAGE */
+
+.products-header-container {
+	display: flex;
+	margin: 10px;
+}
+
+.products-card-container {
+	display: flex;
+}
+
+.products-card {
+	width: 250px;
+	box-shadow: 10px, 0px;
+}
+
+/* FOOTER */
+
+footer {
+	margin: 40px 0;
+	text-align: center;
+}
+
