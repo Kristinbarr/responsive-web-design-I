@@ -229,7 +229,7 @@ header .logo {
 	margin: 15px 0;
 }
 
-/* TABLET CONTENT*/
+/* TABLET HOME PAGE CONTENT */
 @media (max-width: 800px) {
   .home-container {
     justify-content: center;
@@ -252,7 +252,7 @@ header .logo {
     margin: 0 20px;
   }
 }
-/* PHONE CONTENT*/
+/* PHONE HOME PAGE CONTENT */
 @media (max-width: 500px) {
   .header-img {
     display: none;
@@ -307,14 +307,14 @@ header .logo {
 
 .services-card {
 	width: 420px;
-	height: 250px;
+	height: auto;
 	padding: 20px;
 	margin: 20px 0;
 	background-color:#EEE;
-	border: 2px solid black;
+	border: 1px solid black;
 }
 
-.services-card-container .services-content-card button {
+.services-card button {
   background: white;
   margin: 25px 0 0 0;
 	padding: 10px 40px;
@@ -324,7 +324,7 @@ header .logo {
   cursor: pointer;
 }
 
-.services-card-container .services-content-card button:hover {
+.services-card button:hover {
   background: black;
   color: white;
 }
@@ -347,6 +347,59 @@ header .logo {
 
 .services-facts-content p {
 	margin: 0 50px 20px 0;
+}
+
+/* TABLET SERVICES PAGE */
+@media (max-width: 800px) {
+  .services-header-container {
+    width: 100%;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  .services-header-img {
+    width: 100%;
+  }
+  .services-title {
+    margin: 30px 10px;
+  }
+  .services-card-container {
+    margin: 0 0 0 10px;
+  }
+  .services-card {
+    width: 360px;
+  }
+  .services-facts-container {
+    padding: 40px 20px;
+  }
+}
+/* PHONE SERVICES PAGE */
+@media (max-width: 500px) {
+  .services-header-container {
+    width: 100%;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  .services-header-container .services-header-img {
+    width: 150%;
+    margin-left: -5vw;
+  }
+  .services-title {
+    margin: 30px 10px;
+  }
+  .services-card-container {
+    justify-content: center;
+  }
+  .services-facts-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+  }
+  .services-facts-img {
+    padding-bottom: 20px;
+  }
+  .services-facts-content {
+    padding: 20px 0;
+  }
 }
 
 /* PRODUCTS PAGE */
